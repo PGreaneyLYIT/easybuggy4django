@@ -14,7 +14,6 @@ environment_variables:
 phases:
   install:
     commands:
-      - yum update -y
       - yum install -y maven curl wget
       - yum install -y nodejs
       - node --version
