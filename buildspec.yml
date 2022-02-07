@@ -16,8 +16,6 @@ phases:
     commands:
       - yum update -y
       - yum install -y maven curl wget
-      - yum purge nodejs npm
-      - curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
       - yum install -y nodejs
       - node --version
   build:
