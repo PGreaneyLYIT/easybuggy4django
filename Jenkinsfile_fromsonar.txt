@@ -1,0 +1,13 @@
+stage('SonarQube Analysis') {
+    tools {
+      jdk: "java11"
+    }
+    environment {
+        scannerHome = tool 'SQScanner'
+    }
+    steps {
+        withSonarQubeEnv(installationName: 'SonarQube') {
+            sh "${scannerHome}/bin/sonar-scanner -X"
+        }
+    }
+}
